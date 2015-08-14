@@ -2,86 +2,77 @@
 #include "jsonpath.h"
 #include <QJsonObject>
 
-QJsonPath::QJsonPath( QQuickItem* parent )
-   : QQuickItem( parent )
-   , _valid( false )
+QJsonPath::QJsonPath(QQuickItem *parent)
+    : QQuickItem(parent)
+    , m_valid(false)
 {
 }
 
 
-void QJsonPath::setValid( bool v )
+void QJsonPath::setValid(bool v)
 {
-   if ( _valid != v )
-   {
-      _valid = v;    
-      emit validChanged( _valid );
-   }
+    if(m_valid != v) {
+        m_valid = v;
+        emit validChanged(m_valid);
+    }
 }
 
 bool QJsonPath::getValid() const
 {
-   return _valid;
+    return m_valid;
 }
 
 
 QString QJsonPath::getPath() const
 {
-   return _path;
+    return m_path;
 }
 
-void QJsonPath::setPath( const QString& r )
+void QJsonPath::setPath(const QString &r)
 {
-   if ( _path != r )
-   {
-      _path = r;
-      emit pathChanged( _path );
-      update();
-   }
+    if(m_path != r) {
+        m_path = r;
+        emit pathChanged(m_path);
+        update();
+    }
 }
 
 QString QJsonPath::getJson() const
 {
-   return _json;
+    return m_json;
 }
 
-void QJsonPath::setJson( const QString& r )
+void QJsonPath::setJson(const QString &r)
 {
-   if ( _json != r )
-   {
-      _json = r;
-      emit jsonChanged( _json );
-      update();
-   }
+    if(m_json != r) {
+        m_json = r;
+        emit jsonChanged(m_json);
+        update();
+    }
 }
 
 void QJsonPath::update()
 {
-   try
-   {
-      if ( !_json.isEmpty() && !_path.isEmpty() )
-      {
-         //QJsonParseError err;
-         QJsonDocument doc = QJsonDocument::fromJson( _json.toLatin1() ); //, &err );
-         if ( ! doc.isNull() )
-         {
-            QJsonObject obj = doc.object();
-            QJsonValue root( obj );
-            _jsonDocument = ::JsonPath::JsonPath::Parse( root, _path.toLatin1() );
-
-            setValid( true );
-            emit jsonDocumentChanged( _jsonDocument );
-            return;
-         }
-      }
-   }
-   catch (...)
-   {
-   }
-   setValid( false );
+    try {
+        if(!m_json.isEmpty() && !m_path.isEmpty()) {
+            //QJsonParseError err;
+            QJsonDocument doc = QJsonDocument::fromJson(m_json.toLatin1());   //, &err );
+            if(! doc.isNull()) {
+                QJsonObject obj = doc.object();
+                QJsonValue root(obj);
+                m_jsonDocument = ::JsonPath::JsonPath::Parse(root, m_path.toLatin1());
+                setValid(true);
+                emit jsonDocumentChanged(m_jsonDocument);
+                return;
+            }
+        }
+    } catch(...) {
+    }
+    setValid(false);
 }
 
 QJsonDocument QJsonPath::getJsonDocument() const
 {
-   return _jsonDocument;
+    return m_jsonDocument;
 }
 
