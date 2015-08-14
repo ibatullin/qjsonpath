@@ -1,9 +1,3 @@
-/* 
- * File:   JsonPath.cpp
- * Author: jay
- * 
- * Created on March 31, 2014
- */
 #include "jsonpath.h"
 
 #include <sstream>

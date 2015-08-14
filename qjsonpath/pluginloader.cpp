@@ -1,15 +1,9 @@
-/* 
- * File:   PluginLoader.cpp
- * Author: jay
- * 
- * Created on August 13, 2013
- */
 #include "pluginloader.h"
 #include "qjsonpath.h"
 #include "qjsonlistmodel.h"
 
 #include <QQmlEngine>
-#include <QtQml>        // qmlRegisterType<>
+#include <QtQml>
 
 Loader::Loader()
 {
@@ -27,7 +21,6 @@ Loader::~Loader()
 
 void Loader::registerTypes( const char* )
 {
-   // in qml:   "import QJson 0.1"
    qmlRegisterType< QJsonPath >( "QJson", 0, 1, "JsonPath" );
    qmlRegisterType< QJsonListModel >( "QJson", 0, 1, "JsonListModel" );
 }

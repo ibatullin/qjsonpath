@@ -1,6 +1,3 @@
-// An implementation of JSONPath for use with Qt 5.0+ applications
-// Written by Jay Sprenkle ( jsprenkle@gmail )
-
 #include "qjsonpath.h"
 #include "jsonpath.h"
 #include <QJsonObject>
@@ -11,7 +8,6 @@ QJsonPath::QJsonPath( QQuickItem* parent )
 {
 }
 
-// <editor-fold defaultstate="collapsed" desc="valid property">
 
 void QJsonPath::setValid( bool v )
 {
@@ -26,9 +22,7 @@ bool QJsonPath::getValid() const
 {
    return _valid;
 }
-// </editor-fold>
 
-// <editor-fold defaultstate="collapsed" desc="path property">
 
 QString QJsonPath::getPath() const
 {
@@ -44,9 +38,6 @@ void QJsonPath::setPath( const QString& r )
       update();
    }
 }
-// </editor-fold>
-
-// <editor-fold defaultstate="collapsed" desc="json property">
 
 QString QJsonPath::getJson() const
 {
@@ -62,9 +53,6 @@ void QJsonPath::setJson( const QString& r )
       update();
    }
 }
-// </editor-fold>
-
-// <editor-fold defaultstate="collapsed" desc="jsonDocument property">
 
 void QJsonPath::update()
 {
@@ -97,4 +85,3 @@ QJsonDocument QJsonPath::getJsonDocument() const
    return _jsonDocument;
 }
 
-// </editor-fold>

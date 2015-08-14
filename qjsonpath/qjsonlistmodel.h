@@ -1,9 +1,3 @@
-/* 
- * File:   JsonListModel.h
- * Author: jay
- *
- * Created on March 26, 2014
- */
 #ifndef JSONLISTMODEL_H
 #define	JSONLISTMODEL_H
 
@@ -17,7 +11,6 @@ class QJsonListModel
    Q_OBJECT
    Q_PROPERTY( QJsonDocument json READ getJson WRITE setJson NOTIFY jsonChanged )
 
-   // <editor-fold defaultstate="collapsed" desc="json Property">
 public:
    QJsonDocument getJson() const;
    void setJson( const QJsonDocument json );
@@ -25,7 +18,6 @@ signals:
    void jsonChanged( QJsonDocument );
 private:
    QJsonDocument _json;
-   // </editor-fold>
 
 public:
    enum ListRoles

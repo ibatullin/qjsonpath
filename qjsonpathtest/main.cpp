@@ -1,13 +1,7 @@
-/* 
- * File:   main.cpp
- * Author: jay
- *
- * Created on March 28, 2014
- */
 #include <cstdlib>
 
 #include <cpptest.h>
-#include "QJsonPath.h"
+#include "qjsonpath.h"
 
 #include <QJsonObject>
 #include <QJsonArray>
@@ -15,7 +9,6 @@
 #include <QJsonParseError>
 //#include <QDebug>
 
-// <editor-fold defaultstate="collapsed" desc="base class for tests">
 class QJsonPathTest : public Test::Suite
 {
 public:
@@ -32,7 +25,6 @@ public:
       return ::JsonPath::JsonPath::Parse( root, JsonPathStr );
    }
 };
-// </editor-fold>
 
 class HappyPathTest : public QJsonPathTest
 {

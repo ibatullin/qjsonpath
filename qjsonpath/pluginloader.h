@@ -1,9 +1,3 @@
-/* 
- * File:   PluginLoader.h
- * Author: jay
- * 
- * Created on August 13, 2013
- */
 #ifndef CLIENTPLUGINLOADER_H
 #define	CLIENTPLUGINLOADER_H
 
@@ -20,7 +14,6 @@ public:
    Loader( const Loader& orig );
    virtual ~Loader();
 
-   // Override the registerTypes() method and call qmlRegisterType() to register the types to be exported by the plugin
    void registerTypes( const char* uri );
 };
 #endif

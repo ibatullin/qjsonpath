@@ -1,10 +1,3 @@
-/* 
- * File:   JsonPath.h
- * Author: Jay
- *
- * Created on March 31, 2014
- */
-
 #ifndef JSONPATH_H
 #define	JSONPATH_H
 
