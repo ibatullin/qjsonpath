@@ -4,13 +4,13 @@ QT = core gui qml
 TARGET = qjsonpath
 
 SOURCES += \
-    JsonPath.cpp \
-    PluginLoader.cpp \
-    QJsonListModel.cpp \
-    QJsonPath.cpp
+    jsonpath.cpp \
+    pluginloader.cpp \
+    qjsonlistmodel.cpp \
+    qjsonpath.cpp
 
 HEADERS += \
-    JsonPath.h \
-    PluginLoader.h \
-    QJsonListModel.h \
-    QJsonPath.h
+    jsonpath.h \
+    pluginloader.h \
+    qjsonlistmodel.h \
+    qjsonpath.h

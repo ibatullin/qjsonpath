@@ -4,7 +4,7 @@
  * 
  * Created on March 31, 2014
  */
-#include "JsonPath.h"
+#include "jsonpath.h"
 
 #include <sstream>
 #define __STDC_LIMIT_MACROS 1

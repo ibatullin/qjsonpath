@@ -1,8 +1,8 @@
 // An implementation of JSONPath for use with Qt 5.0+ applications
 // Written by Jay Sprenkle ( jsprenkle@gmail )
 
-#include "QJsonPath.h"
-#include "JsonPath.h"
+#include "qjsonpath.h"
+#include "jsonpath.h"
 #include <QJsonObject>
 
 QJsonPath::QJsonPath( QQuickItem* parent )

@@ -4,7 +4,7 @@
 #ifndef __QJSONPATH__
 #define __QJSONPATH__
 
-#include "JsonPath.h"
+#include "jsonpath.h"
 #include <QtQuick/QQuickItem>
 #include <QJsonDocument>
 

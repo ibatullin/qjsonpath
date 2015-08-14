@@ -4,9 +4,9 @@
  * 
  * Created on August 13, 2013
  */
-#include "PluginLoader.h"
-#include "QJsonPath.h"
-#include "QJsonListModel.h"
+#include "pluginloader.h"
+#include "qjsonpath.h"
+#include "qjsonlistmodel.h"
 
 #include <QQmlEngine>
 #include <QtQml>        // qmlRegisterType<>

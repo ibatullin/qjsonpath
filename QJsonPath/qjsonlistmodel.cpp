@@ -4,7 +4,7 @@
  * 
  * Created on March 26, 2014
  */
-#include "QJsonListModel.h"
+#include "qjsonlistmodel.h"
 #include <QJsonArray>
 #include <QJsonObject>
 //#include <QDebug>
